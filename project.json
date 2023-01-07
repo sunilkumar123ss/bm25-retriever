@@ -1,0 +1,8 @@
+{
+  "slug": "bm25-retriever",
+  "title": "BM25 document retriever",
+  "description": "Ranks a small JSON corpus with BM25 term-frequency scoring. Scores use lexical overlap; they are neither embeddings nor semantic similarity. IDs must be unique. Empty or out-of-vocabulary queries return no hits. This in-memory implementation is intended for small corpora.",
+  "category": "agents",
+  "demo_args": [],
+  "expected_exit": 0
+}

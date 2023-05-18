@@ -1,0 +1,14 @@
+[
+  {
+    "id": "voice",
+    "text": "Voice streaming reduces perceived latency with short audio frames."
+  },
+  {
+    "id": "retrieval",
+    "text": "Lexical retrieval ranks documents by query term frequency."
+  },
+  {
+    "id": "deploy",
+    "text": "A deployment needs health checks and rollback snapshots."
+  }
+]

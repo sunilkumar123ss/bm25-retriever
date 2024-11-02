@@ -4,7 +4,7 @@ This reference implementation and all of the following milestone commits were pr
 
 **Every recorded author and committer date in this timeline is synthetic. These dates are not evidence that the code was written, tested, deployed, or used professionally in the past.**
 
-This snapshot is milestone 3 of 12. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
+This snapshot is milestone 4 of 12. It is an incomplete tutorial stage; source, fixtures, tests, the CLI, and automation are introduced progressively.
 
 The progression decomposes already-completed October 2026 code into meaningful additions. It is not recovered original development history. Publication time is separate from the synthetic Git timestamps.
 
@@ -15,7 +15,7 @@ The progression decomposes already-completed October 2026 code into meaningful a
 | 1 | 2023-01-07T09:26:51+05:30 | Define package metadata and local artifact exclusions (present) |
 | 2 | 2023-05-18T14:07:36+05:30 | Add synthetic input fixtures and reference data (present) |
 | 3 | 2024-03-27T09:21:42+05:30 | Implement tokenize (present) |
-| 4 | 2024-11-02T11:00:42+05:30 | Implement BM25 (later stage) |
+| 4 | 2024-11-02T11:00:42+05:30 | Implement BM25 (present) |
 | 5 | 2025-01-03T18:03:09+05:30 | Expose the command-line demonstration and input handling (later stage) |
 | 6 | 2026-02-02T12:02:22+05:30 | Test relevant first and oov abstains (later stage) |
 | 7 | 2026-02-05T11:15:39+05:30 | Test duplicate ids and bad parameters rejected (later stage) |

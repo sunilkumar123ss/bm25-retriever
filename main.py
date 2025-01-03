@@ -51,3 +51,19 @@ class BM25:
                 results.append({"id": doc["id"], "score": round(score, 8), "text": doc["text"]})
         return sorted(results, key=lambda x: (-x["score"], x["id"]))[:limit]
 
+
+def main():
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("query", nargs="?", default="voice latency")
+    parser.add_argument("--corpus", type=Path, default=Path(__file__).with_name("corpus.json"))
+    parser.add_argument("--limit", type=int, default=3)
+    args = parser.parse_args()
+    try:
+        results = BM25(json.loads(args.corpus.read_text())).search(args.query, args.limit)
+    except (ValueError, OSError, TypeError) as exc:
+        parser.error(str(exc))
+    print(json.dumps(results, indent=2))
+
+
+if __name__ == "__main__":
+    main()

@@ -17,4 +17,9 @@ class RetrievalTests(unittest.TestCase):
         self.assertEqual(index.search("voice latency")[0]["id"], "a")
         self.assertEqual(index.search("unseen"), [])
         self.assertEqual(index.search(""), [])
+    def test_duplicate_ids_and_bad_parameters_rejected(self):
+        with self.assertRaises(ValueError):
+            BM25([{"id":"a","text":"x"},{"id":"a","text":"y"}])
+        with self.assertRaises(ValueError):
+            BM25([], b=2)
 

@@ -22,4 +22,7 @@ class RetrievalTests(unittest.TestCase):
             BM25([{"id":"a","text":"x"},{"id":"a","text":"y"}])
         with self.assertRaises(ValueError):
             BM25([], b=2)
+    def test_empty_corpus_and_unicode(self):
+        self.assertEqual(BM25([]).search("x"), [])
+        self.assertEqual(tokenize("Café, CAFÉ!"), ["café", "café"])
 

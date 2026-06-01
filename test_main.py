@@ -25,4 +25,10 @@ class RetrievalTests(unittest.TestCase):
     def test_empty_corpus_and_unicode(self):
         self.assertEqual(BM25([]).search("x"), [])
         self.assertEqual(tokenize("Café, CAFÉ!"), ["café", "café"])
+    def test_stable_tie_and_limit(self):
+        index = BM25([{"id":"b","text":"voice"},{"id":"a","text":"voice"}])
+        self.assertEqual([x["id"] for x in index.search("voice", 1)], ["a"])
+        with self.assertRaises(ValueError):
+            index.search("voice", 0)
 
+if __name__ == "__main__": unittest.main()
